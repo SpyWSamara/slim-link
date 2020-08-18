@@ -1,0 +1,13 @@
+{
+    "name": "spywsamara/slim-link",
+    "description": "Link shortener by slim framework",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SpyWSamara",
+            "email": "spywsamara@gmail.com"
+        }
+    ],
+    "require": {}
+}
