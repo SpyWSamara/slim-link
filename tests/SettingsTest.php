@@ -32,6 +32,18 @@ class SettingsTest extends TestCase
      *
      * @return void
      */
+    public function testIssetKeys($settingsParams, $key, $expected)
+    {
+        $settings = new Settings($settingsParams);
+        $expected = 'notexists' !== $key;
+        $this->assertSame($expected, isset($settings[$key]));
+    }
+
+    /**
+     * @dataProvider settingsDataProvider
+     *
+     * @return void
+     */
     public function testGetKeys($settingsParams, $key, $expected)
     {
         $settings = new Settings($settingsParams);
