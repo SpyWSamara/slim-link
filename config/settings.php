@@ -5,7 +5,7 @@
 \ini_set('display_errors', '0');
 
 // Timezone
-\date_default_timezone_set('Europe/Berlin');
+\date_default_timezone_set('Europe/Samara');
 
 // Settings
 $settings = [];
