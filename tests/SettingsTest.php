@@ -35,7 +35,7 @@ class SettingsTest extends TestCase
     public function testIssetKeys($settingsParams, $key, $expected)
     {
         $settings = new Settings($settingsParams);
-        $expected = 'notexists' !== $key;
+        $expected = !\in_array($key, ['notexists', 'not.exists']);
         $this->assertSame($expected, isset($settings[$key]));
     }
 
@@ -82,6 +82,7 @@ class SettingsTest extends TestCase
             [$settings, 'level.casetest', 'case insensitive'],
             [$settings, 'level.emptyValue', []],
             [$settings, 'notexists', null],
+            [$settings, 'not.exists', null],
         ];
     }
 }
